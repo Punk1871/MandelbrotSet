@@ -32,13 +32,13 @@ void ComplexPlane::draw(RenderTarget& target, RenderStates states) const
 	target.draw(m_vArray);
 }
 
-void ComplexPlane::updateRender() // check displaying state location
+void ComplexPlane::updateRender() 
 {
     if (m_state == CALCULATING)
     {
 	    for (int i = 0; i < m_pixel_size.y; ++i)
 	    {
-	        for (int j = 0; j < m_pixel_size.x; ++j) // check: is this really ++i again?
+	        for (int j = 0; j < m_pixel_size.x; ++j)
 		    {
 			    m_vArray[j + i * m_pixel_size.x].position = {(float)j,(float)i};
 				Vector2f coord = mapPixelToCoords({j, i});
@@ -48,7 +48,7 @@ void ComplexPlane::updateRender() // check displaying state location
 	
 				iterationsToRGB(count, r, g, b);
 	
-				m_vArray[j + i * m_pixel_size.x].color = {r,g,b}; // replaced pixelheight/width to member function m_pixel_size
+				m_vArray[j + i * m_pixel_size.x].color = {r,g,b}; 
 		    }
 	    }
     }
@@ -60,7 +60,7 @@ void ComplexPlane::zoomIn()
     m_zoomCount++;
     float x = BASE_WIDTH * pow(BASE_ZOOM, m_zoomCount);
     float y = BASE_HEIGHT * m_aspectRatio * pow(BASE_ZOOM, m_zoomCount);
-    m_plane_size = {x, y}; // no effect error means change parenthesis to curly brace
+    m_plane_size = {x, y}; 
     m_state = CALCULATING;
 }
 
