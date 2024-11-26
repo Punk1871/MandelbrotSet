@@ -4,6 +4,7 @@
 #include <cmath>
 #include <sstream>
 #include <string>
+#include <SFML/Graphics/Font.hpp>
 using namespace std;
 using namespace sf;
 
