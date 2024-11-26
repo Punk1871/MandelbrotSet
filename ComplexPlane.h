@@ -2,7 +2,7 @@
 #include <SFML/Graphics.hpp>
 #include <complex>
 #include <cmath>
-#include <Font.hpp>
+#include <SFML/Graphics/Font.hpp>
 using namespace sf;
 using namespace std;
 
