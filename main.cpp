@@ -4,6 +4,7 @@
 #include <sstream>
 #include <string>
 #include "ComplexPlane.h"
+#include <SFML/Graphics/Font.hpp>
 using namespace std;
 using namespace sf;
 
