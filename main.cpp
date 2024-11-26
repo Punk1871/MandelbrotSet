@@ -19,7 +19,7 @@ int main()
     
     Text text;
     Font font;
-    if (!font.loadFromFile("arial.ttf"))
+    if (!font.loadFromFile("Arial.ttf"))
     {
         cout << "Error loading font file." << endl;
     }
